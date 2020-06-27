@@ -1,0 +1,11 @@
+{
+  "name": "customizable-yt-live-sub-count",
+  "version": "1.0.0",
+  "description": "Customizable YouTube Live Sub Count",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Please open 'index.html' in your browser\""
+  },
+  "author": "",
+  "license": "MIT"
+}
