@@ -29,9 +29,21 @@
 
         <form action="./process-info.html" method="GET">
             <div class="form-group">
-              <label for="">YouTube Channel</label>
-              <input type="text" name="channel" id="channel-input" class="form-control" placeholder="Enter your channel id" aria-describedby="channel">
+              <label for="channel">YouTube Channel</label>
+              <input type="text" name="channel-input" id="channel-input" class="form-control" placeholder="Enter your channel id" aria-describedby="channel">
               <small id="channel" class="text-muted">This is the text after <code>youtube.com/channel/</code>. Example: <code>UCOoTH-c5vFOmw2UtQUCK8xA</code></small>
+            </div>
+            <div class="form-group">
+                <label for="layout">Layout</label>
+                <small id="layout" class="text-muted">This is the layout for the subscriber counter</code></small>
+                <input type="radio" name="layout-input" id="layout-input-1" class="form-check-input" value="format-1">
+                <input type="radio" name="layout-input" id="layout-input-2" class="form-check-input" value="format-2">
+                <input type="radio" name="layout-input" id="layout-input-3" class="form-check-input" value="format-3">
+                <input type="radio" name="layout-input" id="layout-input-4" class="form-check-input" value="format-4">
+                <input type="radio" name="layout-input" id="layout-input-5" class="form-check-input" value="format-5">
+                <input type="radio" name="layout-input" id="layout-input-6" class="form-check-input" value="format-6">
+                <input type="radio" name="layout-input" id="layout-input-7" class="form-check-input" value="format-7">
+                <input type="radio" name="layout-input" id="layout-input-8" class="form-check-input" value="format-8">
             </div>
         </form>
     </div>
