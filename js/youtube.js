@@ -4,4 +4,4 @@ var apiKey = 'AIzaSyATovUjfXDbXKTQQgn0t63ILZMJZ5AABaU'
 
 // form inputs
 var channelInput = $('#channel-input');
-var 
+ 

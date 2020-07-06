@@ -4,12 +4,57 @@ body {
 }
 
 .content {
-    
     padding: 12pt;
     background-color: #f5f5f5;
     box-shadow: 2pt 2pt lightgray;
 }
 
+.format-input {
+    margin:0;padding:0;
+    -webkit-appearance:none;
+       -moz-appearance:none;
+            appearance:none;
+}
+
+.format-1-btn { background-image: url('../svg/format-1.svg'); }
+.format-2-btn { background-image: url('../svg/format-2.svg'); }
+.format-3-btn { background-image: url('../svg/format-3.svg'); }
+.format-4-btn { background-image: url('../svg/format-4.svg'); }
+.format-5-btn { background-image: url('../svg/format-5.svg'); }
+.format-6-btn { background-image: url('../svg/format-6.svg'); }
+.format-7-btn { background-image: url('../svg/format-7.svg'); }
+.format-8-btn { background-image: url('../svg/format-8.svg'); }
+
+.format-btn{
+    cursor:pointer;
+    background-size:contain;
+    background-repeat:no-repeat;
+    background-position: center;
+    display:inline-block;
+    width:150px;height:50px;
+    background-color: white;
+    border-radius: 5pt;
+    -webkit-transition: all 100ms ease-in;
+       -moz-transition: all 100ms ease-in;
+            transition: all 100ms ease-in;
+    -webkit-filter: brightness(1.8) grayscale(1) opacity(.7);
+       -moz-filter: brightness(1.8) grayscale(1) opacity(.7);
+            filter: brightness(1.8) grayscale(1) opacity(.7);
+}
+
+.format-btn:hover{
+    -webkit-filter: brightness(1.2) grayscale(.5) opacity(.9);
+       -moz-filter: brightness(1.2) grayscale(.5) opacity(.9);
+            filter: brightness(1.2) grayscale(.5) opacity(.9);
+}
+
+.format-form-group input:active + .format-btn {opacity: .9;}
+.format-form-group input:checked + .format-btn{
+    border: 1pt solid darkblue;
+    -webkit-filter: none;
+       -moz-filter: none;
+            filter: none;
+}
 /* Fade in animations */
 /* Credits to A.M.K and Peter Mortensen on https://stackoverflow.com/questions/11679567/using-css-for-a-fade-in-effect-on-page-load */
 

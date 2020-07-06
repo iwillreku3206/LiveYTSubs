@@ -30,22 +30,57 @@
         <form action="./process-info.html" method="GET">
             <div class="form-group">
               <label for="channel">YouTube Channel</label>
-              <input type="text" name="channel-input" id="channel-input" class="form-control" placeholder="Enter your channel id" aria-describedby="channel">
-              <small id="channel" class="text-muted">This is the text after <code>youtube.com/channel/</code>. Example: <code>UCOoTH-c5vFOmw2UtQUCK8xA</code></small>
+              <input type="text" name="channel-input" id="channel-input" class="form-control" placeholder="Enter your channel id" aria-describedby="channel-input">
+              <small id="channel-input-help" class="text-muted">This is the text after <code>youtube.com/channel/</code>. Example: <code>UCOoTH-c5vFOmw2UtQUCK8xA</code></small>
             </div>
+            <div class="form-group format-form-group">
+                <label for="format">Format</label>
+                <small id="format" class="text-muted">This is the format for the subscriber counter</code></small> <br />
+                <input type="radio" name="format-input" id="format-input-1" class="format-input" value="format-1">
+                <label class="format-1-btn format-btn" for="format-input-1"></label> 
+                <input type="radio" name="format-input" id="format-input-2" class="form-check-input format-input" value="format-2">
+                <label class="format-2-btn format-btn" for="format-input-2"></label> 
+                <input type="radio" name="format-input" id="format-input-3" class="form-check-input format-input" value="format-3">
+                <label class="format-3-btn format-btn" for="format-input-3"></label> 
+                <input type="radio" name="format-input" id="format-input-4" class="form-check-input format-input" value="format-4">
+                <label class="format-4-btn format-btn" for="format-input-4"></label> 
+                <input type="radio" name="format-input" id="format-input-5" class="form-check-input format-input" value="format-5">
+                <label class="format-5-btn format-btn" for="format-input-5"></label> 
+                <input type="radio" name="format-input" id="format-input-6" class="form-check-input format-input" value="format-6">
+                <label class="format-6-btn format-btn" for="format-input-6"></label> 
+                <input type="radio" name="format-input" id="format-input-7" class="form-check-input format-input" value="format-7">
+                <label class="format-7-btn format-btn" for="format-input-7"></label> 
+                <input type="radio" name="format-input" id="format-input-8" class="form-check-input format-input" value="format-8">
+                <label class="format-8-btn format-btn" for="format-input-8"></label> 
+            </div>
+            <div class="form-check" id="verify-tick-group">
+                <label class="form-check-label" for="verify-tick">
+                    <input type="checkbox" class="form-check-input" name="verify-tick" id="verify-tick" value="verify-tick" disabled>
+                    Verified Tick? <small id="format" class="text-muted">Only for verified channels</small> 
+                </label>
+            </div><br /><br />
             <div class="form-group">
-                <label for="layout">Layout</label>
-                <small id="layout" class="text-muted">This is the layout for the subscriber counter</code></small>
-                <input type="radio" name="layout-input" id="layout-input-1" class="form-check-input" value="format-1">
-                <input type="radio" name="layout-input" id="layout-input-2" class="form-check-input" value="format-2">
-                <input type="radio" name="layout-input" id="layout-input-3" class="form-check-input" value="format-3">
-                <input type="radio" name="layout-input" id="layout-input-4" class="form-check-input" value="format-4">
-                <input type="radio" name="layout-input" id="layout-input-5" class="form-check-input" value="format-5">
-                <input type="radio" name="layout-input" id="layout-input-6" class="form-check-input" value="format-6">
-                <input type="radio" name="layout-input" id="layout-input-7" class="form-check-input" value="format-7">
-                <input type="radio" name="layout-input" id="layout-input-8" class="form-check-input" value="format-8">
+                <label for="font">Font Family</label>
+                <div class="form-check">
+                <label class="form-check-label">
+                   <input type="checkbox" class="form-check-input" name="custom-font-family-checkbox" id="custom-font-family-checkbox" value="custom-font-family-checkbox">
+                        Custom Font?
+                </label>
+                </div>
+                <br>
+            <div class="form-group" style="margin-bottom: 0pt;">
+                <select class="form-control" name="preset-font" id="preset-font">
+                    <option value="Arial">Arial</option>
+                    <option value="Helvetica">Helvetica</option>
+                    <option value="Courier New">Courier New</option>
+                </select>
+              
+                <input type="text"
+                    class="form-control" name="font" id="custom-font" aria-describedby="custom-font" placeholder="Custom Font Family">
             </div>
         </form>
     </div>
+
+    <script src='js/setup-form.js'></script>
   </body>
 </html>
