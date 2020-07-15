@@ -55,6 +55,18 @@ body {
        -moz-filter: none;
             filter: none;
 }
+.launch-btn {
+    display: block;
+    border-radius: 0pt;
+    border: 1pt green solid;
+    padding: 6pt 12pt 6pt 12pt;
+
+    background-color: #0d0;
+    color: white;
+}
+
+.launch-btn:hover { background-color: green; }
+
 /* Fade in animations */
 /* Credits to A.M.K and Peter Mortensen on https://stackoverflow.com/questions/11679567/using-css-for-a-fade-in-effect-on-page-load */
 

@@ -1,86 +1,105 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <title>Live YouTube Subscriber Count</title>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <head>
+        <title>Live YouTube Subscriber Count</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="./css/main.css">
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="./css/main.css">
 
-  </head>
-  <body>
-    
+    </head>
+    <body>    
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
+        <div class="content">
+            <h1>Live YouTube Subscriber Count</h1>
+            <hr>
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-
-    <div class="content">
-        <h1>Live YouTube Subscriber Count</h1>
-        <hr>
-
-        <form action="./process-info.html" method="GET">
-            <div class="form-group">
-              <label for="channel">YouTube Channel</label>
-              <input type="text" name="channel-input" id="channel-input" class="form-control" placeholder="Enter your channel id" aria-describedby="channel-input">
-              <small id="channel-input-help" class="text-muted">This is the text after <code>youtube.com/channel/</code>. Example: <code>UCOoTH-c5vFOmw2UtQUCK8xA</code></small>
-            </div>
-            <div class="form-group format-form-group">
-                <label for="format">Format</label>
-                <small id="format" class="text-muted">This is the format for the subscriber counter</code></small> <br />
-                <input type="radio" name="format-input" id="format-input-1" class="format-input" value="format-1">
-                <label class="format-1-btn format-btn" for="format-input-1"></label> 
-                <input type="radio" name="format-input" id="format-input-2" class="form-check-input format-input" value="format-2">
-                <label class="format-2-btn format-btn" for="format-input-2"></label> 
-                <input type="radio" name="format-input" id="format-input-3" class="form-check-input format-input" value="format-3">
-                <label class="format-3-btn format-btn" for="format-input-3"></label> 
-                <input type="radio" name="format-input" id="format-input-4" class="form-check-input format-input" value="format-4">
-                <label class="format-4-btn format-btn" for="format-input-4"></label> 
-                <input type="radio" name="format-input" id="format-input-5" class="form-check-input format-input" value="format-5">
-                <label class="format-5-btn format-btn" for="format-input-5"></label> 
-                <input type="radio" name="format-input" id="format-input-6" class="form-check-input format-input" value="format-6">
-                <label class="format-6-btn format-btn" for="format-input-6"></label> 
-                <input type="radio" name="format-input" id="format-input-7" class="form-check-input format-input" value="format-7">
-                <label class="format-7-btn format-btn" for="format-input-7"></label> 
-                <input type="radio" name="format-input" id="format-input-8" class="form-check-input format-input" value="format-8">
-                <label class="format-8-btn format-btn" for="format-input-8"></label> 
-            </div>
-            <div class="form-check" id="verify-tick-group">
-                <label class="form-check-label" for="verify-tick">
-                    <input type="checkbox" class="form-check-input" name="verify-tick" id="verify-tick" value="verify-tick" disabled>
-                    Verified Tick? <small id="format" class="text-muted">Only for verified channels</small> 
-                </label>
-            </div><br /><br />
-            <div class="form-group">
-                <label for="font">Font Family</label>
-                <div class="form-check">
-                <label class="form-check-label">
-                   <input type="checkbox" class="form-check-input" name="custom-font-family-checkbox" id="custom-font-family-checkbox" value="custom-font-family-checkbox">
-                        Custom Font?
-                </label>
+            <form action="./process-data.html" method="GET">
+                <div class="form-group">
+                    <label for="channel">YouTube Channel</label>
+                    <input type="text" name="channel-input" id="channel-input" class="form-control" placeholder="Enter your channel id" aria-describedby="channel-input" required>
+                    <small id="channel-input-help" class="text-muted">This is the text after <code>youtube.com/channel/</code>. Example: <code>UCOoTH-c5vFOmw2UtQUCK8xA</code></small>
                 </div>
                 <br>
-            <div class="form-group" style="margin-bottom: 0pt;">
-                <select class="form-control" name="preset-font" id="preset-font">
-                    <option value="Arial">Arial</option>
-                    <option value="Helvetica">Helvetica</option>
-                    <option value="Courier New">Courier New</option>
-                </select>
-              
-                <input type="text"
-                    class="form-control" name="font" id="custom-font" aria-describedby="custom-font" placeholder="Custom Font Family">
-            </div>
-        </form>
-    </div>
+                <div class="form-group format-form-group">
+                    <label for="format">Format</label>
+                    <small id="format" class="text-muted">This is the format for the subscriber counter</code></small> <br />
+                    <input type="radio" name="format-input" id="format-input-1" class="format-input" value="format-1" required>
+                    <label class="format-1-btn format-btn" for="format-input-1"></label> 
+                    <input type="radio" name="format-input" id="format-input-2" class="form-check-input format-input" value="format-2">
+                    <label class="format-2-btn format-btn" for="format-input-2"></label> 
+                    <input type="radio" name="format-input" id="format-input-3" class="form-check-input format-input" value="format-3">
+                    <label class="format-3-btn format-btn" for="format-input-3"></label> 
+                    <input type="radio" name="format-input" id="format-input-4" class="form-check-input format-input" value="format-4">
+                    <label class="format-4-btn format-btn" for="format-input-4"></label> 
+                    <input type="radio" name="format-input" id="format-input-5" class="form-check-input format-input" value="format-5">
+                    <label class="format-5-btn format-btn" for="format-input-5"></label> 
+                    <input type="radio" name="format-input" id="format-input-6" class="form-check-input format-input" value="format-6">
+                    <label class="format-6-btn format-btn" for="format-input-6"></label> 
+                    <input type="radio" name="format-input" id="format-input-7" class="form-check-input format-input" value="format-7">
+                    <label class="format-7-btn format-btn" for="format-input-7"></label> 
+                    <input type="radio" name="format-input" id="format-input-8" class="form-check-input format-input" value="format-8">
+                    <label class="format-8-btn format-btn" for="format-input-8"></label> 
+                </div>
+                <br>
+                <!--Disabled because there is no way to check if channel is verified via the API-->
+                <!--<div class="form-check" id="verify-tick-group">
+                    <label class="form-check-label" for="verify-tick">
+                        <input type="checkbox" class="form-check-input" name="verify-tick" id="verify-tick" value="verify-tick" disabled>
+                        Verified Tick? <small id="format" class="text-muted">Only for verified channels</small> 
+                    </label>
+                </div>
+                <br>-->
+                <div class="form-group">
+                    <label for="font">Font Family</label>
+                    <div class="form-check">
+                    <label class="form-check-label">
+                        <input type="checkbox" class="form-check-input" name="custom-font-family-checkbox" id="custom-font-family-checkbox" value="custom-font-family-checkbox">
+                            Custom Font?
+                    </label>
+                </div>
+                <br>
+                <div class="form-group" style="margin-bottom: 0pt;">
+                    <select class="form-control" name="preset-font" id="preset-font">
+                        <option value="Arial">Arial</option>
+                        <option value="Helvetica">Helvetica</option>
+                        <option value="Courier New">Courier New</option>
+                    </select>
+                    <input type="text"
+                        class="form-control" name="font" id="custom-font" aria-describedby="custom-font" placeholder="Custom Font Family">
+                </div>
+                <br>
+                <div class="form-group">
+                  <label for="">Colors</label>
+                    <div class="input-group">
+                     	<div class="input-group-prepend">
+                     		<div class="input-group-text">#</div>
+                     	</div>
+                    	<input type="text"
+                        	class="form-control" name="" id="foreground-color" aria-describedby="helpId" placeholder="000000 (Foreground Color)" required>
+                    </div>
+                    <div class="input-group">
+						<div class="input-group-prepend">
+							<div class="input-group-text">#</div>
+						</div>
+						<input type="text"
+							class="form-control" name="" id="background-color" aria-describedby="helpId" placeholder="000000 (Background Color)" required>
+					</div>
+				</div>
+				<button type="submit" name="launch-btn" id="launch-btn" class="launch-btn">Launch</button>
+            </form>
+        </div>
 
-    <script src='js/setup-form.js'></script>
-  </body>
+        <script src='js/setup-form.js'></script>
+    </body>
 </html>

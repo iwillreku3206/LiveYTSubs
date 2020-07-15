@@ -7,5 +7,8 @@
     "test": "echo \"Please open 'index.html' in your browser\""
   },
   "author": "",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "url-parse": "^1.4.7"
+  }
 }
