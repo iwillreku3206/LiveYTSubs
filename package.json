@@ -9,6 +9,6 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "url-parse": "^1.4.7"
+    "url-parse": "^1.5.0"
   }
 }
